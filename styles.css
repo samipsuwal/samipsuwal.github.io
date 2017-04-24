@@ -300,6 +300,10 @@ a img{
         background-size: cover;
     }
 
+    .experience-title span:last-child {
+        padding-left:25px;
+    }
+
 }
 
 /**** Mobile layout ****/
@@ -323,6 +327,16 @@ a img{
         background-color: #f3f3f3;
         background: url('./images/trees.JPG') center 30% no-repeat;
         background-size: cover;
+    }
+
+
+    .experience-title {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .experience-title span:last-child{
+        padding-left:0px;
     }
 
   /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
@@ -422,7 +436,6 @@ a img{
 
 .experience-title span:last-child{
     font-weight: 400;
-    padding-left:25px;
 }
 
 .experience-role {
