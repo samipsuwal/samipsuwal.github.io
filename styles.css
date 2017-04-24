@@ -304,6 +304,17 @@ a img{
         padding-left:25px;
     }
 
+    .blog-title{
+        padding-left: 25px;
+    }
+
+    .blog-container {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
 }
 
 /**** Mobile layout ****/
@@ -322,7 +333,7 @@ a img{
 
     .samip-be-together-section {
         position: relative;
-        height: 400px;
+        min-height: 600px;
         width: auto;
         background-color: #f3f3f3;
         background: url('./images/trees.JPG') center 30% no-repeat;
@@ -338,6 +349,17 @@ a img{
     .experience-title span:last-child{
         padding-left:0px;
     }
+
+    .blog-container {
+        display: flex;
+        flex-flow: column-reverse;
+        margin-bottom: 24px;
+    }
+    .blog-title{
+        padding-left: 0;
+    }
+
+
 
   /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
      consecutive "+" operators in some cases. Therefore, we need to use both
@@ -463,16 +485,13 @@ a img{
     font-size:18px;
 }
 
-.blog-container {
-    margin-bottom: 24px;
-}
+
 
 .blog-title{
     font-weight: 500;
     font-size: 30px;
     line-height: 40px;
     color: #22A39F;
-    padding-left: 25px;
 }
 
 .blog-date {
@@ -492,8 +511,3 @@ override a
     text-decoration: underline;
 }
 
-.blog-container {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-}
