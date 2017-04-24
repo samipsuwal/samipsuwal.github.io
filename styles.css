@@ -287,6 +287,16 @@ a img{
     .material-icons {
         display: none;
     }
+
+
+    .centered-body {
+        /*display: flex;*/
+        /*flex-flow: row wrap;*/
+
+        width: 65em;
+        margin: 0 auto;
+    }
+
 }
 
 /**** Mobile layout ****/
@@ -298,6 +308,10 @@ a img{
   .samip-title {
     display: none !important;
   }
+
+    .centered-body {
+        margin:0 15px;
+    }
 
   /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
      consecutive "+" operators in some cases. Therefore, we need to use both
@@ -343,14 +357,6 @@ a img{
   .samip-footer .mdl-mega-footer--bottom-section {
     display: none;
   }
-}
-
-.centered-body {
-    /*display: flex;*/
-    /*flex-flow: row wrap;*/
-
-    width: 65em;
-    margin: 0 auto;
 }
 
 .about-header {
