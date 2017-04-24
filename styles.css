@@ -318,7 +318,7 @@ a img{
 
     .samip-be-together-section {
         position: relative;
-        height: auto;
+        height: 400px;
         width: auto;
         background-color: #f3f3f3;
         background: url('./images/trees.JPG') center 30% no-repeat;
