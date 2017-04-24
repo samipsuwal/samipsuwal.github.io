@@ -1,170 +1,460 @@
-.portfolio-header {
-  position: relative;
-  background-image: url(images/header-bg.jpg);
-}
 
-.portfolio-header .mdl-layout__header-row {
-  padding: 0;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.mdl-layout__title {
-  font-size: 14px;
-  text-align: center;
-  font-weight: 300;
-}
-
-.is-compact .mdl-layout__title span {
-  display: none;
-}
-
-.portfolio-logo-row {
-  min-height: 200px;
-}
-
-.is-compact .portfolio-logo-row {
-  min-height: auto;
-}
-
-.portfolio-logo {
-  background: url(images/logo.png) 50% no-repeat;
-  background-size: cover;
-  height: 150px;
-  width: 150px;
-  margin: auto auto 10px;
-}
-
-.is-compact .portfolio-logo {
-  height: 50px;
-  width: 50px;
-  margin-top: 7px;
-}
-
-.portfolio-navigation-row {
-  background-color: rgba(0, 0, 0, 0.08);
-  text-transform: uppercase;
-  height: 45px;
-}
-
-.portfolio-navigation-row  .mdl-navigation {
-  text-align: center;
-  max-width: 900px;
-  width: 100%;
-}
-
-.portfolio-navigation-row .mdl-navigation__link {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  line-height: 42px;
-}
-
-.portfolio-header .mdl-layout__drawer-button {
-    background-color: rgba(197, 197, 197, 0.44);
-}
-
-.portfolio-navigation-row .is-active {
-  position: relative;
-  font-weight: bold;
-}
-
-.portfolio-navigation-row .is-active:after {
-  content: "";
-  width: 70%;
-  height: 2px;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: rgb(255,64,129);
-  left: 15%;
-}
-
-.portfolio-card .mdl-card__title {
-  padding-bottom: 0;
-}
-
-.portfolio-blog-card-full-bg {
-  background: url(images/example-blog03.jpg) center / cover;
-}
-
-.portfolio-blog-card-event-bg {
-  background: url(images/example-blog05.jpg) center / cover;
-}
-
-.portfolio-blog-card-strip-bg {
-  background: url(images/example-blog06.jpg) center / cover;
-}
-
-.portfolio-blog-card-compact .mdl-card__title {
-  padding-bottom: 0;
-}
-
-.portfolio-blog-card-bg > .mdl-card__actions {
-  height: 52px;
-  padding: 16px;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-img.article-image {
-  width: 100%;
-  height: auto;
-}
-
-.portfolio-max-width {
-  max-width: 900px;
-  margin: auto;
-}
-
-.portfolio-copy {
-  max-width: 700px;
-}
-
-.no-padding {
-  padding: 0;
-}
-
-.no-left-padding{
-  padding-left: 0;
-}
-
-.no-bottom-padding {
-  padding-bottom: 0;
-}
-
-.padding-top {
-  padding: 10px 0 0;
-}
-
-.portfolio-share-btn {
-  position: relative;
-  float: right;
-  top: -4px;
-}
-
-.demo-card-event > .mdl-card__actions {
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+body {
+  margin: 0;
     box-sizing: border-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
 }
 
-.portfolio-contact .mdl-textfield {
-  width: 100%;
+/* Disable ugly boxes around images in IE10 */
+a img{
+  border: 0px;
 }
 
-.portfolio-contact form {
-  max-width: 550px;
-  margin: auto;
+::-moz-selection {
+  background-color: #6ab344;
+  color: #fff;
 }
 
-footer {
-  background-image: url(images/footer-background.png);
+::selection {
+  background-color: #6ab344;
+  color: #fff;
+}
+
+.samip-header {
+  overflow: visible;
+  background-color: white;
+}
+
+  .samip-header .material-icons {
+    color: #767777 !important;
+  }
+
+  .samip-header .mdl-layout__drawer-button {
+    background: transparent;
+    color: #767777;
+  }
+
+  .samip-header .mdl-navigation__link {
+    color: #757575;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .samip-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .samip-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 800px;
+  }
+
+  .samip-search-box.is-focused + .samip-navigation-container {
+    opacity: 0;
+    width: 100px;
+  }
+
+
+  .samip-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+  }
+
+    .samip-navigation .mdl-navigation__link:hover {
+      /*border-bottom: 4px solid #8bc34a;*/
+      border-bottom: 4px solid #22A39F;
+    }
+
+  .samip-search-box {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .samip-more-button {
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+
+.samip-be-together-section {
+  position: relative;
+  min-height: 800px;
+  width: auto;
+  background-color: #f3f3f3;
+  background: url('images/trees.jpg') center 30% no-repeat;
   background-size: cover;
 }
 
+.logo-font {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 2;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+.samip-slogan {
+  font-size: 90px;
+  padding-top: 160px;
+}
+
+.samip-sub-slogan {
+  font-size: 35px;
+  margin-top: -15px;
+}
+
+.samip-create-character {
+  font-size: 21px;
+  padding-top: 400px;
+}
+
+.samip-create-character a {
+    text-decoration: none;
+    color: #767777;
+    font-weight: 300;
+}
+
+.samip-screen-section {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.samip-auto {
+  display: inline-block;
+  width: 300px;
+  overflow: hidden;
+}
+
+.samip-auto .samip-screen-image {
+  display: block;
+  height: 300px;
+  z-index: 1;
+}
+
+.samip-link {
+  text-decoration: none;
+  color: #8bc34a !important;
+}
+
+.samip-link:hover {
+    color: #7cb342 !important;
+}
+
+.samip-link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+}
+
+.samip-alt-link {
+  text-decoration: none;
+  color: #64ffda !important;
+  font-size: 16px;
+}
+
+.samip-alt-link:hover {
+    color: #00bfa5 !important;
+}
+
+.samip-alt-link .material-icons {
+    position: relative;
+    top: 6px;
+}
+
+.samip-customized-section {
+  text-align: center;
+}
+
+.samip-customized-section-text {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 16px 0 16px;
+}
+
+  .samip-customized-section-text p {
+    padding-top: 16px;
+  }
+
+/*.samip-customized-section-image {*/
+  /*background: url('images/devices.jpg') center top no-repeat;*/
+  /*background-size: cover;*/
+  /*height: 400px;*/
+/*}*/
+
+.samip-more-section {
+  padding: 80px 0;
+  max-width: 1044px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .samip-more-section .samip-section-title {
+    margin-left: 12px;
+    padding-bottom: 24px;
+  }
+
+
+  .samip-card-container .mdl-card__media {
+    overflow: hidden;
+    background: transparent;
+  }
+
+    .samip-card-container .mdl-card__media img {
+      width: 100%;
+    }
+
+  .samip-card-container .mdl-card__title {
+    background: transparent;
+    height: auto;
+  }
+
+  .samip-card-container .mdl-card__title-text {
+    color: black;
+    height: auto;
+  }
+
+  .samip-card-container .mdl-card__supporting-text {
+    height: auto;
+    color: black;
+    padding-bottom: 56px;
+  }
+
+  .samip-card-container .mdl-card__actions {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .samip-card-container .mdl-card__actions a {
+    border-top: none;
+    font-size: 16px;
+  }
+
+.samip-footer {
+  background-color: #fafafa;
+  position: relative;
+}
+
+  .samip-footer a:hover {
+    color: #8bc34a;
+  }
+
+  .samip-footer .mdl-mega-footer--top-section::after {
+    border-bottom: none;
+  }
+
+  .samip-footer .mdl-mega-footer--middle-section::after {
+    border-bottom: none;
+  }
+
+  .samip-footer .mdl-mega-footer--bottom-section {
+    position: relative;
+  }
+
+  .samip-footer .mdl-mega-footer--bottom-section a {
+    margin-right: 2em;
+  }
+
+  .samip-footer .mdl-mega-footer--right-section a .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+.samip-link-menu:hover {
+  cursor: pointer;
+}
+
+/**** Mobile layout ****/
+@media (max-width: 900px) {
+  .samip-navigation-container {
+    display: none;
+  }
+
+  .samip-title {
+    display: none !important;
+  }
+
+  /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+     consecutive "+" operators in some cases. Therefore, we need to use both
+     here to cover all the bases. */
+  .samip.samip-search-box.is-focused ~ .samip-mobile-title,
+  .samip-search-box.is-focused + .samip-navigation-container + .samip-mobile-title {
+    opacity: 0;
+  }
+
+  .samip-search-box.is-focused {
+    width: calc(100% - 48px);
+  }
+
+  .samip-search-box .mdl-textfield__expandable-holder {
+    width: 100%;
+  }
+
+  .samip-be-together-section {
+    height: 350px;
+  }
+
+  .samip-slogan {
+    font-size: 26px;
+    margin: 0 16px;
+    padding-top: 160px;
+  }
+
+  .samip-sub-slogan {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+
+  .samip-create-character {
+    padding-top: 200px;
+    font-size: 16px;
+  }
+
+  .samip-create-character img {
+    height: 12px;
+  }
+
+  .samip-footer .mdl-mega-footer--bottom-section {
+    display: none;
+  }
+}
+
+.centered-body {
+    /*display: flex;*/
+    /*flex-flow: row wrap;*/
+
+    width: 65em;
+    margin: 0 auto;
+}
+
+.about-header {
+    margin-bottom: 24px;
+    font-weight: 500;
+    border-bottom: 1px solid #dededc;
+    font-size: 34px;
+    line-height: 40px;
+    color: #22A39F;
+}
+
+.about-section{
+    display:flex;
+    flex-flow:column;
+    align-items: stretch;
+}
+
+.about-description-photo-container {
+    display:flex;
+    flex-flow:row;
+}
+
+
+.samip-picture-container {
+    width:300px;
+    height: 300px;
+    padding-left: 10px;
+}
+
+.description-container p {
+    font-size:18px;
+}
+
+.samip-picture-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.experience-item {
+    padding-bottom: 20px;
+}
+.experience-title {
+    padding-bottom: 8px;
+    line-height: 24px;
+    font-size: 18px;
+}
+
+.experience-title span:first-child{
+    font-weight: 700;
+}
+
+.experience-title span:last-child{
+    font-weight: 400;
+    padding-left:25px;
+}
+
+.experience-role {
+    font-size:17px;
+    padding-bottom: 10px;
+}
+
+.experience-description {
+    font-size:17px;
+}
+
+.collection-content {
+    display:flex;
+    flex-flow:row;
+}
+
+.collection-description-container {
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 150px;
+    padding-right: 45px;
+}
+
+.collection-description-container p {
+    font-size:18px;
+}
+
+.blog-container {
+    margin-bottom: 24px;
+}
+
+.blog-title{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    color: #22A39F;
+    padding-left: 25px;
+}
+
+.blog-date {
+    font-weight: 400;
+    font-size: 22px;
+    color: #898989;
+}
+/**
+override a
+ */
+.blog-title a {
+    color: #22A39F;;
+    font-weight: 400;
+    text-decoration: none;
+}
+.blog-title a:hover {
+    text-decoration: underline;
+}
+
+.blog-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
