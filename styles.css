@@ -93,14 +93,7 @@ a img{
   }
 
 
-.samip-be-together-section {
-  position: relative;
-  min-height: 800px;
-  width: auto;
-  background-color: #f3f3f3;
-  background: url('./images/trees.JPG') center 30% no-repeat;
-  background-size: cover;
-}
+
 
 .logo-font {
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
@@ -297,20 +290,39 @@ a img{
         margin: 0 auto;
     }
 
+
+    .samip-be-together-section {
+        position: relative;
+        min-height: 800px;
+        width: auto;
+        background-color: #f3f3f3;
+        background: url('./images/trees.JPG') center 30% no-repeat;
+        background-size: cover;
+    }
+
 }
 
 /**** Mobile layout ****/
 @media (max-width: 900px) {
-  .samip-navigation-container {
-    display: none;
-  }
+      .samip-navigation-container {
+        display: none;
+      }
 
-  .samip-title {
-    display: none !important;
-  }
+      .samip-title {
+        display: none !important;
+      }
 
     .centered-body {
         margin:0 15px;
+    }
+
+    .samip-be-together-section {
+        position: relative;
+        height: auto;
+        width: auto;
+        background-color: #f3f3f3;
+        background: url('./images/trees.JPG') center 30% no-repeat;
+        background-size: cover;
     }
 
   /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
