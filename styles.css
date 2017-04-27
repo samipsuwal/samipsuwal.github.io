@@ -476,6 +476,9 @@ a img{
     font-size: 18px;
 }
 
+.experience-role {
+    font-weight: 700;
+}
 .experience-title span:first-child{
     font-weight: 700;
 }
