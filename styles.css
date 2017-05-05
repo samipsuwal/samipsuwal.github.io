@@ -592,6 +592,8 @@ override a
     padding-bottom: 10px;
 }
 
+
+
 a.modified {
     color: #22A39F;;
     font-weight: 400;
@@ -601,4 +603,25 @@ a.modified {
 a.modified:hover {
     text-decoration: underline;
 }
+
+
+/*COLLECTION PAGE*/
+.collection-category-container {
+    padding: 15px 0;
+}
+.collection-category-title{
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.collection-item-title{
+    font-size: 18px;
+    padding-bottom:5px;
+}
+
+.collection-item-description > p{
+    font-size:15px;
+}
+
 
