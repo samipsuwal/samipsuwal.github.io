@@ -604,6 +604,12 @@ a.modified:hover {
     text-decoration: underline;
 }
 
+a.modified-no-underline {
+    color: #22A39F;;
+    font-weight: 400;
+    text-decoration: none;
+}
+
 
 /*COLLECTION PAGE*/
 .collection-category-container {
