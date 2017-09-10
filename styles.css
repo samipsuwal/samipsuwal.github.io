@@ -615,6 +615,19 @@ a.modified-no-underline {
     text-decoration: none;
 }
 
+.social-media-icons-container {
+    margin-top:25px;
+}
+
+.linkedin-icon {
+    width: 47px;
+}
+
+
+.stackoverflow-icon {
+    width: 60px;
+}
+
 
 /*COLLECTION PAGE*/
 .collection-category-container {
