@@ -662,8 +662,10 @@ a.modified-no-underline {
 }
 
 .collection-item-image-container >img {
-    max-width:100%;
+    max-width:380px;
     height: auto;
 }
+
+
 
 
